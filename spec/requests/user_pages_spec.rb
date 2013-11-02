@@ -1,11 +1,19 @@
 require 'spec_helper'
 
 describe "UserPages" do
-  describe "GET /user_pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get user_pages_index_path
-      response.status.should be(200)
+  describe "Sign up page" do
+    it "should have the word Sign up" do
+      visit signup_path
+      expect(page).to have_content('Sign up')
+    end
+  end
+end
+
+describe "UserPages" do
+  describe "Sign up page" do
+    it "should have the right title" do
+      visit signup_path
+      expect(page).to have_title('Sign up')
     end
   end
 end
