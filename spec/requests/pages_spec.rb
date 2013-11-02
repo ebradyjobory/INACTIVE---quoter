@@ -4,7 +4,7 @@ describe "Pages" do
 
   describe "Home" do
     it "should have the word Home" do
-      visit "/pages/home"
+      visit root_path
       expect(page).to have_content ('Home')
     end
   end
@@ -13,7 +13,7 @@ describe "Pages" do
 
   describe "About" do
     it "should have the word About" do
-      visit "/pages/about"
+      visit about_path
       expect(page).to have_content ('About')
     end
   end
@@ -24,7 +24,7 @@ describe "Pages" do
 
   describe "page title" do
     it "should have the right title" do
-      visit "/pages/about"
+      visit about_path
       expect(page).to have_title ('About')
     end
   end
@@ -34,7 +34,7 @@ describe "Pages" do
 
   describe "custom title" do
     it "should not have custom title" do
-      visit "/pages/home"
+      visit root_path
       expect(page).not_to have_title ('| Home')
     end
   end
