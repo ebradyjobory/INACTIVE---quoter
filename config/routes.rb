@@ -3,7 +3,9 @@ Quoter::Application.routes.draw do
   root  'pages#home'
   match '/about', to: 'pages#about', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
+  match '/index', to: 'users#index', via: 'get'
   match '/show', to: 'users#show', via: 'get'
+  # match '/show', to: 'users#show', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
